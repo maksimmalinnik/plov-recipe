@@ -1,0 +1,223 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепт Настоящего Плова</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .info-card strong {
+            display: block;
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 12px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        
+        li:hover {
+            transform: translateX(5px);
+            background: #e9ecef;
+        }
+        
+        .steps li {
+            background: linear-gradient(90deg, #667eea10 0%, transparent 100%);
+            counter-increment: step;
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .steps {
+            counter-reset: step;
+        }
+        
+        .tip {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .tip strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍚 Самый Рассыпчатый и Вкусный Плов 🍚</h1>
+            <p class="subtitle">Проверенный рецепт идеального плова</p>
+        </header>
+        
+        <div class="content">
+            <div class="info-grid">
+                <div class="info-card">
+                    <strong>⏱️ Время</strong>
+                    <p>2-3 часа</p>
+                </div>
+                <div class="info-card">
+                    <strong>👥 Порций</strong>
+                    <p>8-10 человек</p>
+                </div>
+                <div class="info-card">
+                    <strong>🔥 Сложность</strong>
+                    <p>Средняя</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Ингредиенты</h2>
+                <ul>
+                    <li>🍖 Говядина (мякоть) - 1 кг</li>
+                    <li>🍚 Рис - 1 кг</li>
+                    <li>🧅 Лук репчатый - 3-4 шт</li>
+                    <li>🥕 Морковь - 1 кг</li>
+                    <li>🫒 Масло растительное - 300 мл</li>
+                    <li>💧 Сода пищевая - 1 ст.л.</li>
+                    <li>🧂 Соль - по вкусу</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Приготовление</h2>
+                <ul class="steps">
+                    <li>Разогрейте казан и налейте масло. Прокалите его до появления лёгкого дымка.</li>
+                    <li>Нарежьте лук полукольцами и обжарьте до золотистого цвета.</li>
+                    <li>Добавьте говядину, нарезанную кубиками. Обжарьте на сильном огне до румяной корочки.</li>
+                    <li>Морковь нарежьте соломкой и добавьте к мясу. Жарьте 10-15 минут, помешивая.</li>
+                    <li>Посолите по вкусу и перемешайте.</li>
+                    <li>Залейте кипятком так, чтобы вода покрывала мясо на 2-3 см. Добавьте 1 столовую ложку соды. Тушите 40-60 минут на среднем огне.</li>
+                    <li>Промойте рис белизной (добавьте белизну в воду), затем тщательно прополощите чистой водой несколько раз.</li>
+                    <li>Выложите рис ровным слоем поверх мяса с овощами. Разровняйте шумовкой, но не перемешивайте!</li>
+                    <li>Аккуратно долейте кипяток, чтобы вода была выше риса на 1-1,5 см.</li>
+                    <li>Накройте крышкой и варите на сильном огне до выпаривания воды.</li>
+                    <li>Когда вода испарится, соберите рис горкой, сделайте несколько отверстий палочкой до дна.</li>
+                    <li>Уменьшите огонь до минимума, накройте крышкой и томите 25-30 минут.</li>
+                    <li>Снимите с огня, перемешайте плов и дайте настояться 10-15 минут.</li>
+                </ul>
+            </div>
+            
+            <div class="tip">
+                <strong>💡 Совет шеф-повара:</strong>
+                Настоящий плов готовится на сильном огне в начале и очень слабом в конце. Не открывайте крышку во время томления - рис должен пропариться! Подавайте плов на большом блюде, украсив чесноком и посыпав свежей зеленью.
+            </div>
+        </div>
+        
+        <footer>
+            <p>Приятного аппетита! 🍽️</p>
+        </footer>
+    </div>
+</body>
+</html>
+```
